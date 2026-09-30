@@ -3,9 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environment
+# Virtual environments
 venv/
 .venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Project-specific
 rit/
 
 # Pytest
@@ -13,6 +19,7 @@ rit/
 
 # Environment variables
 .env
+.envrc
 
 # macOS
 .DS_Store
@@ -23,3 +30,26 @@ rit/
 
 # Logs
 *.log
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MyPy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
