@@ -83,8 +83,6 @@
                 #0b1020;
         }
 
-        /* Subtle Data Science background pattern */
-
         .intro::before {
             content: "";
             position: absolute;
@@ -107,6 +105,7 @@
             border-radius: 50%;
             right: -100px;
             bottom: -120px;
+
             box-shadow:
                 0 0 0 35px rgba(103,232,249,0.03),
                 0 0 0 70px rgba(103,232,249,0.02);
@@ -402,6 +401,21 @@
             box-shadow: 0 20px 40px rgba(15,23,42,0.11);
         }
 
+        .project-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 15px;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+
+            color: #4f46e5;
+            background: #eef2ff;
+
+            border-radius: 20px;
+        }
+
         .project-card h3 {
             color: #312e81;
             font-size: 21px;
@@ -411,6 +425,60 @@
         .project-card p {
             color: #64748b;
             line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tech-stack span {
+            padding: 7px 13px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            color: #475569;
+            background: #f1f5f9;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .project-btn {
+            display: inline-block;
+            padding: 11px 20px;
+
+            border-radius: 9px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .project-btn.primary {
+            color: white;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+
+        .project-btn.secondary {
+            color: #4f46e5;
+            background: white;
+            border: 1px solid #c7d2fe;
+        }
+
+        .project-btn:hover {
+            transform: translateY(-3px);
         }
 
         /* ================= INTERNSHIP ================= */
@@ -837,24 +905,58 @@
 
         <div class="project-card">
 
+            <div class="project-badge">
+                DEVOPS PROJECT
+            </div>
+
             <h3>
-                Personal Portfolio Website – DevOps Project
+                Personal Portfolio Website
             </h3>
 
             <p>
                 This is my first project, developed as part of my
-                learning journey in DevOps. The project involves
-                building and deploying a web application using
-                modern development and deployment practices.
+                learning journey in DevOps. It is a personal portfolio
+                website designed to showcase my skills, education,
+                internship experience, and projects.
             </p>
 
             <br>
 
             <p>
-                This project helped me gain practical experience
-                with Git, GitHub, Docker, CI/CD, and cloud-based
-                deployment platforms.
+                The project also helped me gain practical experience
+                with modern development and deployment practices,
+                including Git, GitHub, Docker, CI/CD, and
+                cloud-based deployment.
             </p>
+
+            <div class="tech-stack">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Docker</span>
+                <span>CI/CD</span>
+                <span>Cloud</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a
+                    href="https://github.com/shweta215-s/devops-mlops-project"
+                    target="_blank"
+                    class="project-btn primary">
+                    View on GitHub
+                </a>
+
+                <a
+                    href="#"
+                    class="project-btn secondary">
+                    Live Website
+                </a>
+
+            </div>
 
         </div>
 
@@ -902,7 +1004,6 @@
 
     </section>
 
-
     <!-- ================= CONTACT ================= -->
 
     <section id="contact" class="contact">
@@ -933,7 +1034,6 @@
         </p>
 
     </section>
-
 
     <!-- ================= FOOTER ================= -->
 
