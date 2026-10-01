@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Niyam Savale</title>
+    <title>Shweta Sudhir Sakhare | Portfolio</title>
 
     <style>
         * {
@@ -12,6 +12,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -39,46 +43,89 @@
             margin-left: 25px;
         }
 
-        /* Hero */
-        .hero {
-            min-height: 450px;
+        nav a:hover {
+            color: #f97316;
+        }
+
+        /* Introduction */
+        .intro {
+            min-height: 480px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background: linear-gradient(135deg, #0f172a, #1e3a8a);
             color: white;
         }
 
-        .hero h1 {
-            font-size: 50px;
+        .intro-content {
+            max-width: 850px;
+        }
+
+        .welcome-text {
+            color: #f97316;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .intro h1 {
+            font-size: 52px;
             margin-bottom: 15px;
         }
 
-        .hero span {
+        .intro h1 span {
             color: #f97316;
         }
 
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin-bottom: 25px;
+        .intro h3 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 18px;
         }
 
-        button {
+        .intro p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            color: #cbd5e1;
+            font-size: 17px !important;
+            margin-bottom: 30px !important;
+        }
+
+        .intro-buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
             background: #f97316;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 12px 25px;
             border-radius: 6px;
-            cursor: pointer;
+            margin: 5px;
             font-size: 16px;
+            transition: 0.3s;
         }
 
-        button:hover {
+        .btn:hover {
             background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #f97316;
+        }
+
+        .btn-outline:hover {
+            background: #f97316;
         }
 
         /* Sections */
@@ -92,36 +139,119 @@
             font-size: 32px;
         }
 
+        /* About */
         .about {
             text-align: center;
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
-            line-height: 1.7;
+            line-height: 1.8;
+            font-size: 17px;
         }
 
-        /* Services */
-        .services {
+        /* Education */
+        .education {
+            background: #e2e8f0;
+        }
+
+        .education-list {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .education-card h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #64748b;
+        }
+
+        /* Skills */
+        .skills {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
-        .card {
+        .skill-card {
             background: white;
-            padding: 30px 20px;
+            padding: 25px 15px;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
         }
 
-        .card h3 {
-            margin-bottom: 12px;
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
             color: #0f172a;
+            margin-bottom: 10px;
         }
 
-        .card p {
+        .skill-card p {
             color: #64748b;
             line-height: 1.5;
+        }
+
+        /* Projects */
+        .projects {
+            background: #e2e8f0;
+        }
+
+        .project-card {
+            background: white;
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Internship */
+        .internship-card {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .internship-card h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .internship-card h4 {
+            color: #f97316;
+            margin-bottom: 15px;
+        }
+
+        .internship-card p {
+            color: #64748b;
+            line-height: 1.7;
         }
 
         /* Contact */
@@ -130,6 +260,21 @@
             background: #e2e8f0;
         }
 
+        .contact p {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #f97316;
+        }
+
+        /* Footer */
         footer {
             background: #0f172a;
             color: white;
@@ -137,24 +282,39 @@
             padding: 20px;
         }
 
-        @media (max-width: 800px) {
-            .services {
+        /* Responsive */
+        @media (max-width: 900px) {
+            .skills {
                 grid-template-columns: 1fr 1fr;
-            }
-
-            .hero h1 {
-                font-size: 38px;
             }
         }
 
-        @media (max-width: 500px) {
-            .services {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 600px) {
 
             nav {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .intro h1 {
+                font-size: 38px;
+            }
+
+            .intro h3 {
+                font-size: 20px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 6%;
             }
         }
     </style>
@@ -167,133 +327,276 @@
         <h2>Shweta Sakhare</h2>
 
         <div>
+            <a href="#intro">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Services</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#internship">Internship</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
 
-        <h1>We Vision <span>Inspiration</span></h1>
+    <!-- Introduction -->
+    <section class="intro" id="intro">
 
-        <p>
-            Niyam is a CSE student working at VSpireInnovations
-        </p>
+        <div class="intro-content">
 
-        <button onclick="showMessage()">
-            Explore More
-        </button>
+            <p class="welcome-text">
+                WELCOME TO MY PORTFOLIO
+            </p>
+
+            <h1>
+                Shweta Sudhir <span>Sakhare</span>
+            </h1>
+
+            <h3>
+                Computer Science & Engineering Student
+            </h3>
+
+            <p>
+                Aspiring Data Scientist passionate about
+                technology, data and innovative solutions.
+            </p>
+
+            <p class="tagline">
+                Learn • Build • Analyze • Grow
+            </p>
+
+            <div class="intro-buttons">
+                <a href="#skills" class="btn">
+                    Explore My Skills
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Let's Connect
+                </a>
+            </div>
+
+        </div>
 
     </section>
 
-    <!-- About -->
+
+    <!-- About Me -->
     <section id="about">
 
-        <h2>About Us</h2>
+        <h2>About Me</h2>
 
         <div class="about">
 
             <p>
-                VSpireInnovations is a technology company focused on
-                building modern software solutions and providing
-                industry-oriented technical training.
+                I am Shweta Sudhir Sakhare, a Computer Science and
+                Engineering student currently pursuing my third year
+                of B.Tech. I am passionate about technology, programming,
+                and solving real-world problems through innovative solutions.
             </p>
 
             <br>
 
             <p>
-                We work across Artificial Intelligence, Data Science,
-                DevOps, MLOps and Full Stack Development.
+                I have a strong interest in Data Science and aspire to
+                build my career as a Data Scientist. I enjoy working on
+                projects because they help me transform theoretical
+                knowledge into practical skills.
+            </p>
+
+            <br>
+
+            <p>
+                I am always interested in learning new technologies,
+                exploring data-driven solutions, and improving my
+                technical abilities.
             </p>
 
         </div>
 
     </section>
 
-    <!-- Services -->
-    <section id="services">
 
-        <h2>Our Services</h2>
+    <!-- Education -->
+    <section id="education" class="education">
 
-        <div class="services">
+        <h2>Education</h2>
 
-            <div class="card">
-                <h3>AI & ML</h3>
-                <p>
-                    Artificial Intelligence and Machine Learning
-                    solutions for real-world applications.
-                </p>
+        <div class="education-list">
+
+            <div class="education-card">
+                <h3>B.Tech in Computer Science and Engineering</h3>
+                <p>3rd Year – Currently Pursuing</p>
             </div>
 
-            <div class="card">
-                <h3>Data Science</h3>
-                <p>
-                    Data analytics, visualization and
-                    machine learning solutions.
-                </p>
+            <div class="education-card">
+                <h3>Higher Secondary Education</h3>
+                <p>12th – Completed</p>
             </div>
 
-            <div class="card">
-                <h3>DevOps & MLOps</h3>
-                <p>
-                    CI/CD, Docker, Kubernetes, cloud deployment
-                    and ML automation.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Full Stack</h3>
-                <p>
-                    Modern frontend and backend application
-                    development.
-                </p>
+            <div class="education-card">
+                <h3>Secondary School Education</h3>
+                <p>10th – Completed</p>
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python, SQL</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Technologies</h3>
+                <p>HTML, CSS, JavaScript – Basic</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Analytics</h3>
+                <p>Excel, Power BI, Tableau</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Skills</h3>
+                <p>
+                    Data Analysis, Data Visualization,
+                    Data Cleaning & Preprocessing
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <p>Machine Learning – Fundamentals</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Version Control</h3>
+                <p>Git & GitHub</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>DevOps</h3>
+                <p>Docker, DevOps Fundamentals</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-card">
+
+            <h3>Personal Portfolio Website – DevOps Project</h3>
+
+            <p>
+                This is my first project, developed as part of my
+                learning journey in DevOps. The project involves
+                building and deploying a web application using
+                modern development and deployment practices.
+            </p>
+
+            <br>
+
+            <p>
+                This project helped me gain practical experience
+                with Git, GitHub, Docker, CI/CD, and cloud-based
+                deployment platforms.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Internship -->
+    <section id="internship">
+
+        <h2>Internship</h2>
+
+        <div class="internship-card">
+
+            <h3>Data Analytics Internship</h3>
+
+            <h4>Yess Infotech, Kolhapur</h4>
+
+            <p>
+                Completed a Data Analytics internship at Yess
+                Infotech, Kolhapur after my second year of engineering.
+            </p>
+
+            <br>
+
+            <p>
+                During the internship, I gained practical exposure
+                to Python, Microsoft Excel, Power BI, Tableau,
+                data cleaning, data analysis, and data visualization.
+            </p>
+
+            <br>
+
+            <p>
+                I worked with data to identify patterns, generate
+                meaningful insights, and present information through
+                analytical reports and visualizations.
+            </p>
+
+        </div>
+
+    </section>
+
+
     <!-- Contact -->
     <section id="contact" class="contact">
 
-        <h2>Contact Us</h2>
+        <h2>Let's Connect</h2>
 
         <p>
-            Email: info@vspireinnovations.com
+            Email:
+            <a href="mailto:shwetasakhare473@gmail.com">
+                shwetasakhare473@gmail.com
+            </a>
         </p>
 
-        <br>
+        <p>
+            GitHub:
+            <a href="https://github.com/shweta215-s" target="_blank">
+                shweta215-s
+            </a>
+        </p>
 
-        <button onclick="contactMessage()">
-            Contact Us
-        </button>
+        <p>
+            LinkedIn:
+            <a
+                href="https://www.linkedin.com/in/shweta-sakhare-3a63862b8/"
+                target="_blank">
+                Shweta Sakhare
+            </a>
+        </p>
 
     </section>
+
 
     <!-- Footer -->
     <footer>
 
         <p>
-            © 2026 VSpireInnovations. All Rights Reserved.
+            © 2026 Shweta Sudhir Sakhare. All Rights Reserved.
         </p>
 
     </footer>
-
-
-    <!-- JavaScript -->
-    <script>
-
-        function showMessage() {
-            alert("Welcome to VSpireInnovations!");
-        }
-
-        function contactMessage() {
-            alert("Thank you for contacting VSpireInnovations!");
-        }
-
-    </script>
 
 </body>
 </html>
